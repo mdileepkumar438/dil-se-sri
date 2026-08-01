@@ -85,6 +85,6 @@ body.actions-visible{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
 @media(prefers-reduced-motion:reduce){.guest-actions,.invitation-viewer[open],.viewer-canvas img,.detail-card,.venue-card,.family-note{animation:none;transition:none}.reveal{transform:none}}
 
 /* Compact invitation preview */
-.invitation-frame{width:min(100%,350px);justify-self:center;margin-inline:auto}
+.invitation-frame{width:min(100%,280px);justify-self:center;margin-inline:auto}
 .invitation-trigger span{bottom:10px;min-height:36px;padding-inline:13px;font-size:7px;letter-spacing:.12em}
-@media(max-width:760px){.intro{gap:52px}.invitation-frame{width:clamp(240px,68vw,270px)}.invitation-trigger span{min-height:36px}.invitation-frame figcaption{padding-top:11px}}
+@media(max-width:760px){.intro{gap:44px}.invitation-frame{width:clamp(180px,52vw,210px)}.invitation-trigger span{min-height:32px;padding-inline:10px;font-size:6.5px}.invitation-frame figcaption{padding:9px 4px 3px;font-size:13px}}
