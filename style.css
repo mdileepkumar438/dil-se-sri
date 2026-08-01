@@ -62,7 +62,7 @@ body.landing-open{overflow:hidden}
 body.actions-visible{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
 .music-toggle{bottom:calc(86px + env(safe-area-inset-bottom))}
 .invitation-trigger{position:relative;display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;color:#fff;-webkit-tap-highlight-color:transparent}
-.invitation-trigger img{width:100%;display:block;aspect-ratio:1050/1498;object-fit:cover}
+.invitation-trigger img{width:100%;height:auto;display:block;aspect-ratio:auto;object-fit:contain}
 .invitation-trigger span{position:absolute;left:50%;bottom:14px;min-height:42px;display:flex;align-items:center;padding:0 16px;border-radius:999px;background:rgba(38,68,56,.88);font:500 8px Montserrat,sans-serif;letter-spacing:.15em;text-transform:uppercase;white-space:nowrap;transform:translateX(-50%);box-shadow:0 6px 20px rgba(0,0,0,.16);backdrop-filter:blur(8px);transition:transform .2s,background .2s}
 .invitation-trigger:active span{transform:translateX(-50%) scale(.95);background:var(--wine)}
 .invitation-trigger:focus-visible{outline:3px solid var(--wine);outline-offset:4px}
