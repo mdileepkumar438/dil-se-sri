@@ -83,3 +83,8 @@ body.actions-visible{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
 @media(max-height:620px) and (orientation:landscape){.landing-copy{top:18px;left:30%;width:54vw}.landing h1{font-size:clamp(28px,6vw,44px)}.landing-blessing,.landing-kicker{display:none}.couple-stage{left:74%;bottom:18px;width:48vw;height:84dvh}.open-invitation{left:30%;bottom:25px}.petal{display:none}}
 @media(min-width:761px){.guest-actions{left:auto;right:20px;width:auto;transform:translateY(110px)}.guest-actions.is-visible{transform:none}.guest-actions a,.guest-actions button{width:72px}.music-toggle{bottom:96px}.invitation-trigger:hover span{transform:translateX(-50%) translateY(-3px);background:var(--wine)}}
 @media(prefers-reduced-motion:reduce){.guest-actions,.invitation-viewer[open],.viewer-canvas img,.detail-card,.venue-card,.family-note{animation:none;transition:none}.reveal{transform:none}}
+
+/* Compact invitation preview */
+.invitation-frame{width:min(100%,350px);justify-self:center;margin-inline:auto}
+.invitation-trigger span{bottom:10px;min-height:36px;padding-inline:13px;font-size:7px;letter-spacing:.12em}
+@media(max-width:760px){.intro{gap:52px}.invitation-frame{width:clamp(240px,68vw,270px)}.invitation-trigger span{min-height:36px}.invitation-frame figcaption{padding-top:11px}}
