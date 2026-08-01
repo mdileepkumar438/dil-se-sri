@@ -84,6 +84,28 @@ body.actions-visible{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
 @media(min-width:761px){.guest-actions{left:auto;right:20px;width:auto;transform:translateY(110px)}.guest-actions.is-visible{transform:none}.guest-actions a,.guest-actions button{width:72px}.music-toggle{bottom:96px}.invitation-trigger:hover span{transform:translateX(-50%) translateY(-3px);background:var(--wine)}}
 @media(prefers-reduced-motion:reduce){.guest-actions,.invitation-viewer[open],.viewer-canvas img,.detail-card,.venue-card,.family-note{animation:none;transition:none}.reveal{transform:none}}
 
+/* Mobile navigation */
+.nav-toggle{display:none;width:46px;height:46px;padding:0;border:0;background:transparent;color:var(--ink);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.nav-toggle-bars{position:relative;display:block;width:24px;height:12px;margin:0 auto}
+.nav-toggle-bars i{position:absolute;left:0;width:100%;height:1px;background:currentColor;transition:transform .3s ease,opacity .2s ease}
+.nav-toggle-bars i:first-child{top:0}.nav-toggle-bars i:last-child{bottom:0}
+.nav-toggle[aria-expanded=true]{color:var(--wine)}
+.nav-toggle[aria-expanded=true] .nav-toggle-bars i:first-child{transform:translateY(5.5px) rotate(45deg)}
+.nav-toggle[aria-expanded=true] .nav-toggle-bars i:last-child{transform:translateY(-5.5px) rotate(-45deg)}
+.nav-toggle:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+@media(max-width:760px){
+  .nav-toggle{display:block;position:relative;z-index:61}
+  body.menu-open .site-header{z-index:70}
+  .site-header nav{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:rgba(251,244,232,.97);backdrop-filter:blur(14px);opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .32s ease,transform .32s ease,visibility .32s}
+  .site-header nav.is-open{opacity:1;visibility:visible;transform:none}
+  .site-header nav:before{content:"";position:absolute;inset:16px;border:1px solid var(--line);pointer-events:none}
+  .site-header nav a{display:flex;align-items:center;min-height:48px;padding:0 24px;font:400 28px 'Cormorant Garamond',serif;letter-spacing:.06em;text-transform:none;color:var(--wine)}
+  .site-header nav a:after{display:none}
+  .site-header nav a:active{color:var(--gold)}
+  body.menu-open{overflow:hidden}
+}
+@media(prefers-reduced-motion:reduce){.site-header nav,.nav-toggle-bars i{transition:none}}
+
 /* Compact invitation preview */
 .invitation-frame{width:min(100%,280px);justify-self:center;margin-inline:auto}
 .invitation-trigger span{bottom:10px;min-height:36px;padding-inline:13px;font-size:7px;letter-spacing:.12em}

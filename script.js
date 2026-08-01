@@ -184,4 +184,32 @@ viewerCanvas.addEventListener('touchend', (event) => {
   }
 }, { passive: true });
 
+const navToggle = document.getElementById('navToggle');
+const primaryNav = document.getElementById('primaryNav');
+
+function setMenu(open) {
+  primaryNav.classList.toggle('is-open', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  document.body.classList.toggle('menu-open', open);
+
+  if (open) {
+    primaryNav.querySelector('a').focus({ preventScroll: true });
+  } else {
+    navToggle.focus({ preventScroll: true });
+  }
+}
+
+navToggle.addEventListener('click', () => {
+  setMenu(navToggle.getAttribute('aria-expanded') !== 'true');
+});
+
+primaryNav.addEventListener('click', (event) => {
+  if (event.target.closest('a')) setMenu(false);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && primaryNav.classList.contains('is-open')) setMenu(false);
+});
+
 window.requestAnimationFrame(() => openInvitation.focus({ preventScroll: true }));
