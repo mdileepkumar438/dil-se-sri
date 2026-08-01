@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#fbf4e8">
   <meta name="description" content="Engagement invitation of Dileep Kumar and Srinithya — 15 August 2026 at Green Treat, Hyderabad.">
   <title>Dileep Kumar &amp; Srinithya | Engagement Invitation</title>
-  <link rel="preload" href="landing-florals.webp" as="image" type="image/webp">
-  <link rel="preload" href="bride.webp" as="image" type="image/webp">
-  <link rel="preload" href="groom.webp" as="image" type="image/webp">
+  <link rel="preload" href="landing-florals-mobile.webp" as="image" type="image/webp" media="(max-width: 760px)">
+  <link rel="preload" href="bride-mobile.webp" as="image" type="image/webp" media="(max-width: 760px)">
+  <link rel="preload" href="groom-mobile.webp" as="image" type="image/webp" media="(max-width: 760px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Italiana&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -27,8 +27,8 @@
       <p class="landing-date">15 · 08 · 2026</p>
     </div>
     <div class="couple-stage" aria-hidden="true">
-      <img class="landing-person landing-bride" src="bride.webp" alt="">
-      <img class="landing-person landing-groom" src="groom.webp" alt="">
+      <img class="landing-person landing-bride" src="bride.webp" srcset="bride-mobile.webp 422w, bride.webp 866w" sizes="(max-width: 760px) 58vw, 360px" width="866" height="1800" alt="">
+      <img class="landing-person landing-groom" src="groom.webp" srcset="groom-mobile.webp 501w, groom.webp 875w" sizes="(max-width: 760px) 58vw, 360px" width="875" height="1798" alt="">
     </div>
     <button class="open-invitation" id="openInvitation" type="button">
       <span>Open Invitation</span><i aria-hidden="true">↓</i>
@@ -41,6 +41,21 @@
   <audio id="backgroundMusic" loop preload="none">
     <source src="engagement-music.mp3" type="audio/mpeg">
   </audio>
+
+  <nav class="guest-actions" id="guestActions" aria-label="Invitation actions" hidden>
+    <a href="dileep-srinithya-engagement.ics" download aria-label="Add engagement to calendar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2v3M18 2v3M3.5 9h17M5 4h14a2 2 0 0 1 2 2v14H3V6a2 2 0 0 1 2-2Z"/></svg>
+      <span>Calendar</span>
+    </a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Green+Treat+Kothapet+Hyderabad" target="_blank" rel="noopener noreferrer" aria-label="Open venue directions">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      <span>Directions</span>
+    </a>
+    <button id="shareInvitation" type="button" aria-label="Share engagement invitation">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"/></svg>
+      <span>Share</span>
+    </button>
+  </nav>
 
   <header class="site-header">
     <a class="monogram" href="#home" aria-label="Dileep Kumar and Srinithya, home">D <span>&amp;</span> S</a>
@@ -74,7 +89,10 @@
         <p>With the blessings of Lord Venkateshwara Swami, our beloved elders and well-wishers, we begin a new chapter together. Your gracious presence will make this joyous occasion even more memorable.</p>
       </div>
       <figure class="invitation-frame reveal">
-        <img src="invitation-groom-side.jpg" alt="Groom-side engagement invitation for Dileep and Srinithya" loading="lazy">
+        <button class="invitation-trigger" id="invitationTrigger" type="button" aria-label="Open full-screen invitation">
+          <img src="invitation-groom-side.jpg" alt="Groom-side engagement invitation for Dileep and Srinithya" width="1050" height="1498" loading="lazy">
+          <span>Tap to view invitation</span>
+        </button>
         <figcaption>Our official invitation</figcaption>
       </figure>
     </section>
@@ -132,6 +150,20 @@
       </div>
     </section>
   </main>
+
+  <dialog class="invitation-viewer" id="invitationViewer" aria-label="Full engagement invitation">
+    <div class="viewer-toolbar">
+      <p>Our official invitation</p>
+      <div>
+        <a href="invitation-groom-side.jpg" download="Dileep-Kumar-Srinithya-Engagement.jpg" aria-label="Download invitation">↓</a>
+        <button id="closeInvitation" type="button" aria-label="Close invitation">×</button>
+      </div>
+    </div>
+    <div class="viewer-canvas" id="viewerCanvas">
+      <img id="viewerImage" data-src="invitation-groom-side.jpg" width="1050" height="1498" alt="Full engagement invitation for Dileep Kumar and Srinithya">
+    </div>
+    <p class="viewer-hint">Pinch or double-tap to zoom</p>
+  </dialog>
 
   <footer>
     <div class="footer-mark">D <span>&amp;</span> S</div>

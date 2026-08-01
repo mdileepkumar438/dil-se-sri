@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Dil se Sri//Engagement Invitation//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:20260815T103300-dil-se-sri@mdileepkumar438.github.io
+DTSTAMP:20260801T000000Z
+DTSTART;TZID=Asia/Kolkata:20260815T103300
+DTEND;TZID=Asia/Kolkata:20260815T140000
+SUMMARY:Dileep Kumar & Srinithya — Engagement Ceremony
+LOCATION:Green Treat\, Kothapet\, Hyderabad\, India
+DESCRIPTION:Join us as we celebrate the engagement of Dileep Kumar and Srinithya. Lunch follows. #Dil se Sri\nhttps://mdileepkumar438.github.io/dil-se-sri/
+URL:https://mdileepkumar438.github.io/dil-se-sri/
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
