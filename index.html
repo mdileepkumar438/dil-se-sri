@@ -6,6 +6,9 @@
   <meta name="theme-color" content="#fbf4e8">
   <meta name="description" content="Engagement invitation of Dileep Kumar and Srinithya — 15 August 2026 at Green Treat, Hyderabad.">
   <title>Dileep Kumar &amp; Srinithya | Engagement Invitation</title>
+  <link rel="preload" href="landing-florals.webp" as="image" type="image/webp">
+  <link rel="preload" href="bride.webp" as="image" type="image/webp">
+  <link rel="preload" href="groom.webp" as="image" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Italiana&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,6 +16,32 @@
 </head>
 <body>
   <div class="page-glow" aria-hidden="true"></div>
+  <section class="landing" id="landing" role="dialog" aria-modal="true" aria-label="Engagement invitation welcome">
+    <div class="landing-shade" aria-hidden="true"></div>
+    <div class="petals" id="petals" aria-hidden="true"></div>
+    <div class="landing-copy">
+      <p class="landing-blessing">॥ Sri Ganeshaya Namah ॥</p>
+      <p class="landing-kicker">Together with our families</p>
+      <h1><span>Dileep Kumar</span><em>&amp;</em><span>Srinithya</span></h1>
+      <p class="landing-hashtag">#Dil se Sri</p>
+      <p class="landing-date">15 · 08 · 2026</p>
+    </div>
+    <div class="couple-stage" aria-hidden="true">
+      <img class="landing-person landing-bride" src="bride.webp" alt="">
+      <img class="landing-person landing-groom" src="groom.webp" alt="">
+    </div>
+    <button class="open-invitation" id="openInvitation" type="button">
+      <span>Open Invitation</span><i aria-hidden="true">↓</i>
+    </button>
+  </section>
+
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Play background music" aria-pressed="false" hidden>
+    <span class="music-icon" aria-hidden="true">♪</span><span class="music-label">Music</span>
+  </button>
+  <audio id="backgroundMusic" loop preload="none">
+    <source src="engagement-music.mp3" type="audio/mpeg">
+  </audio>
+
   <header class="site-header">
     <a class="monogram" href="#home" aria-label="Dileep Kumar and Srinithya, home">D <span>&amp;</span> S</a>
     <nav aria-label="Main navigation">
@@ -24,8 +53,6 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="botanical botanical-left" aria-hidden="true"><span>❀</span></div>
-      <div class="botanical botanical-right" aria-hidden="true"><span>❀</span></div>
       <div class="hero-inner reveal">
         <p class="blessing">॥ Sri Ganeshaya Namah ॥</p>
         <p class="kicker">Together with our families</p>
@@ -107,7 +134,7 @@
   </main>
 
   <footer>
-    <div class="footer-mark">S <span>&amp;</span> D</div>
+    <div class="footer-mark">D <span>&amp;</span> S</div>
     <p>We look forward to celebrating with you and your family.</p>
     <small>15 · 08 · 2026</small>
   </footer>
