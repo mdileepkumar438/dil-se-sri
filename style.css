@@ -30,8 +30,6 @@ body.landing-open{overflow:hidden}
 .landing-person{position:absolute;bottom:0;height:100%;width:54%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 18px 18px rgba(77,46,21,.16))}
 .landing-bride{left:50%;transform:translateX(-170%);opacity:0;animation:brideArrives 1.6s .35s cubic-bezier(.22,.78,.2,1) forwards}
 .landing-groom{left:50%;transform:translateX(70%);opacity:0;animation:groomArrives 1.6s .35s cubic-bezier(.22,.78,.2,1) forwards}
-.ring-sparkle{position:absolute;z-index:4;left:50%;bottom:47%;width:16px;height:16px;border:2px solid var(--gold);border-radius:50%;opacity:0;transform:translate(-50%,8px) scale(.35);box-shadow:0 0 0 0 rgba(180,130,47,.35);animation:ringSparkle 1.8s 2.15s ease-out infinite}
-.ring-sparkle:before,.ring-sparkle:after{content:"";position:absolute;left:50%;top:50%;width:2px;height:24px;background:var(--gold);transform:translate(-50%,-50%);opacity:.75}.ring-sparkle:after{transform:translate(-50%,-50%) rotate(90deg)}
 .open-invitation{position:absolute;z-index:6;left:50%;bottom:27px;display:flex;align-items:center;gap:13px;padding:14px 23px;border:1px solid var(--wine);background:rgba(255,250,241,.9);color:var(--wine);font:500 9px Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase;transform:translateX(-50%);cursor:pointer;box-shadow:0 9px 28px rgba(86,44,33,.12);backdrop-filter:blur(8px);animation:buttonIn .8s 1.65s both;transition:background .25s,color .25s,transform .25s}
 .open-invitation:hover,.open-invitation:focus-visible{background:var(--wine);color:#fff;transform:translateX(-50%) translateY(-3px);outline:2px solid #fff;outline-offset:3px}
 .open-invitation i{font:400 15px serif;animation:bob 1.8s infinite}
@@ -48,13 +46,12 @@ body.bride-page .countdown-section{background-image:linear-gradient(rgba(253,247
 @keyframes landingCopyIn{from{opacity:0;transform:translate(-50%,-16px)}to{opacity:1;transform:translate(-50%,0)}}
 @keyframes brideArrives{to{opacity:1;transform:translateX(-92%)}}
 @keyframes groomArrives{to{opacity:1;transform:translateX(-8%)}}
-@keyframes ringSparkle{0%,100%{opacity:0;transform:translate(-50%,8px) scale(.35);box-shadow:0 0 0 0 rgba(180,130,47,.35)}30%{opacity:1;transform:translate(-50%,0) scale(1);box-shadow:0 0 0 10px rgba(180,130,47,0)}70%{opacity:.75;transform:translate(-50%,-3px) scale(.8);box-shadow:0 0 0 16px rgba(180,130,47,0)}}
 @keyframes buttonIn{from{opacity:0;transform:translate(-50%,12px)}to{opacity:1;transform:translate(-50%,0)}}
 @keyframes petalFall{0%{translate:0 -10vh;rotate:0deg}50%{translate:35px 54vh;rotate:180deg}100%{translate:-20px 112vh;rotate:360deg}}
 @keyframes musicPulse{50%{transform:scale(1.12);box-shadow:0 0 0 5px rgba(138,32,67,.12)}}
 @media(max-width:760px){.landing:before{inset:10px}.landing-copy{top:clamp(46px,6vh,64px);width:92vw}.landing h1{flex-direction:column;gap:1px;font-size:clamp(37px,11vw,56px);line-height:.87}.landing h1 em{margin:4px 0}.landing-kicker{letter-spacing:.2em}.landing-hashtag{margin-top:9px}.couple-stage{bottom:65px;width:98vw;height:min(45vh,430px)}.landing-person{width:58%}.landing-bride{left:51%}.landing-groom{left:49%}.open-invitation{bottom:20px;white-space:nowrap}.music-toggle{right:12px;bottom:12px}.hero{background-position:center}}
 @media(max-height:700px){.landing-copy{top:34px}.landing-blessing{margin-bottom:7px}.landing-hashtag{margin-block:6px}.couple-stage{height:43vh}.open-invitation{bottom:14px}}
-@media(prefers-reduced-motion:reduce){.landing-copy,.landing-bride,.landing-groom,.open-invitation{animation:none}.landing-bride{opacity:1;transform:translateX(-92%)}.landing-groom{opacity:1;transform:translateX(-8%)}.ring-sparkle{animation:none;opacity:1;transform:translate(-50%,0) scale(.8)}.petal{display:none}.landing.is-opening .landing-bride{transform:translateX(-78%)}.landing.is-opening .landing-groom{transform:translateX(-22%)}.music-toggle.is-playing .music-icon{animation:none}}
+@media(prefers-reduced-motion:reduce){.landing-copy,.landing-bride,.landing-groom,.open-invitation{animation:none}.landing-bride{opacity:1;transform:translateX(-92%)}.landing-groom{opacity:1;transform:translateX(-8%)}.petal{display:none}.landing.is-opening .landing-bride{transform:translateX(-78%)}.landing.is-opening .landing-groom{transform:translateX(-22%)}.music-toggle.is-playing .music-icon{animation:none}}
 
 /* Mobile-first guest actions and invitation viewer */
 .guest-actions{position:fixed;z-index:45;left:50%;bottom:max(10px,env(safe-area-inset-bottom));display:flex;width:min(410px,calc(100vw - 20px));min-height:64px;padding:6px;border:1px solid rgba(180,130,47,.28);border-radius:20px;background:rgba(255,250,242,.94);box-shadow:0 12px 36px rgba(61,39,23,.2);backdrop-filter:blur(16px);transform:translate(-50%,110px);opacity:0;transition:transform .55s cubic-bezier(.22,.78,.2,1),opacity .4s ease}
@@ -146,6 +143,5 @@ body.landing-open .site-header{opacity:0;visibility:hidden;pointer-events:none}
 .couple-placement{position:absolute;z-index:2;left:50%;bottom:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 18px 18px rgba(77,46,21,.16));opacity:0;transform:translate(-50%,18px) scale(.96);animation:couplePlacementArrives 1.6s .35s cubic-bezier(.22,.78,.2,1) forwards}
 @keyframes couplePlacementArrives{to{opacity:1;transform:translate(-50%,0) scale(1)}}
 .landing.is-opening .couple-placement{animation:none;transform:translate(-50%,-8px) scale(1.03);transition:transform 1.05s cubic-bezier(.22,.78,.2,1)}
-.ring-sparkle{left:56%;bottom:57%}
-@media(max-width:760px){.couple-stage{width:96vw;height:min(48dvh,430px)}.couple-placement{width:100%;height:100%}.ring-sparkle{left:56%;bottom:55%}}
-@media(prefers-reduced-motion:reduce){.couple-placement{animation:none;opacity:1;transform:translate(-50%,0) scale(1)}.landing.is-opening .couple-placement{transform:translate(-50%,0) scale(1)}.ring-sparkle{animation:none;opacity:1;transform:translate(-50%,0) scale(.8)}}
+@media(max-width:760px){.couple-stage{width:96vw;height:min(48dvh,430px)}.couple-placement{width:100%;height:100%}}
+@media(prefers-reduced-motion:reduce){.couple-placement{animation:none;opacity:1;transform:translate(-50%,0) scale(1)}.landing.is-opening .couple-placement{transform:translate(-50%,0) scale(1)}}
