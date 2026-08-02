@@ -118,9 +118,9 @@ musicToggle.addEventListener('click', () => {
 });
 
 const shareData = {
-  title: 'Dileep Kumar & Srinithya — Engagement',
-  text: 'Two hearts, one beautiful beginning. Join us on 15 August 2026 at Green Treat, Kothapet. #Dil se Sri',
-  url: 'https://mdileepkumar438.github.io/dil-se-sri/'
+  title: document.body.dataset.shareTitle,
+  text: document.body.dataset.shareText,
+  url: document.body.dataset.shareUrl
 };
 
 shareInvitation.addEventListener('click', async () => {
