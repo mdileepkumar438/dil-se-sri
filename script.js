@@ -99,14 +99,16 @@ openInvitation.addEventListener('click', () => {
   window.setTimeout(() => {
     landing.classList.add('is-leaving');
     landing.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('landing-open');
     document.body.classList.add('actions-visible');
     guestActions.hidden = false;
     window.requestAnimationFrame(() => guestActions.classList.add('is-visible'));
-    document.querySelector('.monogram').focus({ preventScroll: true });
   }, 1050);
 
-  window.setTimeout(() => landing.remove(), 1900);
+  window.setTimeout(() => {
+    landing.remove();
+    document.body.classList.remove('landing-open');
+    document.querySelector('.monogram').focus({ preventScroll: true });
+  }, 1900);
 }, { once: true });
 
 musicToggle.addEventListener('click', () => {

@@ -112,3 +112,22 @@ body.actions-visible{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
 .invitation-frame{width:min(100%,280px);justify-self:center;margin-inline:auto}
 .invitation-trigger span{bottom:10px;min-height:36px;padding-inline:13px;font-size:7px;letter-spacing:.12em}
 @media(max-width:760px){.intro{gap:44px}.invitation-frame{width:clamp(180px,52vw,210px)}.invitation-trigger span{min-height:32px;padding-inline:10px;font-size:6.5px}.invitation-frame figcaption{padding:9px 4px 3px;font-size:13px}}
+
+/* Landing overlay owns the screen until the invitation is opened. */
+.site-header{transition:opacity .2s ease,visibility .2s ease}
+body.landing-open .site-header{opacity:0;visibility:hidden;pointer-events:none}
+@keyframes landingCopyLandscapeIn{from{opacity:0;transform:translateY(calc(-50% - 16px))}to{opacity:1;transform:translateY(-50%)}}
+@media(max-height:620px) and (orientation:landscape){
+  .landing{overflow-x:hidden;overflow-y:auto}
+  .landing-copy{top:50%;left:6%;width:min(42vw,420px);max-width:42vw;min-width:0;max-height:calc(100svh - 28px);overflow-y:auto;transform:translateY(-50%);animation:landingCopyLandscapeIn 1.1s .2s both}
+  .landing-blessing{display:block;margin-bottom:7px;font-size:clamp(10px,1.8vw,14px)}
+  .landing-kicker{display:block;margin-bottom:7px;font-size:clamp(7px,1.2vw,10px);letter-spacing:.2em}
+  .landing h1{display:flex;flex-direction:column;gap:2px;max-width:100%;font-size:clamp(26px,5.3vw,46px);line-height:.9;white-space:normal}
+  .landing h1 span{max-width:100%;overflow-wrap:anywhere}
+  .landing-hashtag{margin:8px 0 6px;padding:3px 10px;font-size:clamp(14px,2.3vw,19px)}
+  .landing-date{font-size:clamp(7px,1.25vw,10px);letter-spacing:.22em}
+  .couple-stage{left:74%;bottom:16px;width:49vw;height:calc(100svh - 32px);max-height:340px;min-height:230px}
+  .landing-person{width:56%;max-width:56%}
+  .open-invitation{left:27%;bottom:10px;min-height:44px;padding:10px 16px;white-space:nowrap}
+  .landing.is-opening .landing-copy{transform:translateY(calc(-50% - 18px))}
+}
