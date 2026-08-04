@@ -42,7 +42,7 @@ body.landing-open{overflow:hidden}
 .music-toggle{position:fixed;z-index:50;right:20px;bottom:20px;align-items:center;gap:8px;padding:11px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,250,242,.9);color:var(--wine);box-shadow:0 8px 28px rgba(70,44,24,.14);backdrop-filter:blur(10px);cursor:pointer}
 .music-toggle:not([hidden]){display:flex}.music-icon{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:var(--wine);color:#fff;font-size:14px}.music-label{font-size:8px;font-weight:500;letter-spacing:.18em;text-transform:uppercase}.music-toggle.is-playing .music-icon{animation:musicPulse 1.4s ease-in-out infinite}
 .hero{background:linear-gradient(rgba(255,251,243,.88),rgba(255,251,243,.92)),url(landing-florals.webp) center/cover no-repeat}
-body.bride-page .countdown-section{background-image:linear-gradient(rgba(253,247,237,.92),rgba(253,247,237,.92)),url(invitation-bride-side.jpg)}
+body.bride-page .countdown-section{background-image:linear-gradient(rgba(253,247,237,.92),rgba(253,247,237,.92)),url(invitation-bride-final.jpeg)}
 @keyframes landingCopyIn{from{opacity:0;transform:translate(-50%,-16px)}to{opacity:1;transform:translate(-50%,0)}}
 @keyframes brideArrives{to{opacity:1;transform:translateX(-92%)}}
 @keyframes groomArrives{to{opacity:1;transform:translateX(-8%)}}
